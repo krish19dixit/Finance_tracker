@@ -1,0 +1,42 @@
+-- This is a placeholder SQL file for MongoDB setup instructions
+-- Since we're using MongoDB, we don't need traditional SQL scripts
+-- Instead, you can use the following MongoDB commands in your MongoDB Atlas cluster:
+
+-- 1. Create a database called 'finance_tracker'
+-- 2. Create a collection called 'transactions'
+-- 3. Optionally, you can insert some sample data using MongoDB Compass or the MongoDB shell
+
+-- Sample MongoDB commands (run in MongoDB shell):
+-- use finance_tracker
+-- 
+-- db.transactions.insertMany([
+--   {
+--     description: "Initial Salary",
+--     amount: 5000,
+--     date: "2024-01-01",
+--     type: "income",
+--     createdAt: new Date(),
+--     updatedAt: new Date()
+--   },
+--   {
+--     description: "Rent Payment",
+--     amount: 1200,
+--     date: "2024-01-01",
+--     type: "expense", 
+--     createdAt: new Date(),
+--     updatedAt: new Date()
+--   },
+--   {
+--     description: "Groceries",
+--     amount: 150,
+--     date: "2024-01-02",
+--     type: "expense",
+--     createdAt: new Date(),
+--     updatedAt: new Date()
+--   }
+-- ])
+
+-- Create indexes for better performance:
+-- db.transactions.createIndex({ "date": -1 })
+-- db.transactions.createIndex({ "type": 1 })
+-- db.transactions.createIndex({ "createdAt": -1 })
